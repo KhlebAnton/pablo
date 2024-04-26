@@ -3,6 +3,9 @@ const answer = document.getElementById('answer');
 const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present');
+
+const speech = document.getElementById('speech');
+
 document.getElementById('bg-sound').volume = 0.2;
 btn.addEventListener('click', () => { document.getElementById('bg-sound').play() });
 
@@ -27,10 +30,7 @@ btn.addEventListener('click', () => {
             present.classList.add('open');
         }, 3000);
         setTimeout(() => {
-            var audio = new Audio();
-            audio.preload = 'auto';
-            audio.src = 'speech.mp3';
-            audio.play();
+            speech.play();
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
         }, 5000);
