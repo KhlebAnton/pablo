@@ -4,6 +4,9 @@ const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present');
 const speech = document.getElementById('speech');
+const audio = new Audio();
+audio.preload = 'auto';
+audio.volume = 0.3;
 
 document.getElementById('bg-sound').volume = 0.2;
 present.addEventListener('click', () => { document.getElementById('bg-sound').play() });
@@ -20,8 +23,6 @@ let soundNo = [
 btn.addEventListener('click', () => {
     if (answer.value == 27) {
         label.style.opacity = '0';
-        var audio = new Audio();
-        audio.preload = 'auto';
         audio.src = 'yes sound/oh-yeah.mp3';
         audio.play();
 
@@ -29,15 +30,13 @@ btn.addEventListener('click', () => {
             present.classList.add('open');
         }, 3000);
         setTimeout(() => {
-            speech.play();
-            speech.volume = 1;
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
+            speech.volume = 1;
+            speech.play();
             setTimeout(() => {
                 imgPresent.addEventListener('click', () => {
                     var randomIndex = Math.floor(Math.random() * soundNo.length);
-                    var audio = new Audio();
-                    audio.preload = 'auto';
                     audio.src = soundNo[randomIndex];
                     audio.play();
                 })
@@ -48,9 +47,6 @@ btn.addEventListener('click', () => {
     } else {
         answer.value = '';
         var randomIndex = Math.floor(Math.random() * soundNo.length);
-        var audio = new Audio();
-        audio.preload = 'auto';
-        audio.volume = 0.3;
         audio.src = soundNo[randomIndex];
         audio.play();
     }
