@@ -4,7 +4,9 @@ const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present');
 
-const speech = document.getElementById('speech');
+var audioSpech = new Audio();
+audioSpech.preload = 'auto';
+audioSpech.src = 'speech.mp3';
 
 let soundNo = [
     'no sound/no-bezrazl.mp3',
@@ -25,13 +27,10 @@ btn.addEventListener('click', () => {
 
         setTimeout(() => {
             present.classList.add('open');
-            var audio = new Audio();
-            audio.preload = 'auto';
-            audio.src = 'speech.mp3';
         }, 3000);
         setTimeout(() => {
             
-            audio.play();
+            audioSpech.play();
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
         }, 5000);
