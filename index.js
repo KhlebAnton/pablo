@@ -27,7 +27,7 @@ btn.addEventListener('click', () => {
             present.classList.add('open');
         }, 3000);
         setTimeout(() => {
-            var speech = new speech();
+            var speech = new Audio();
             speech.preload = 'auto';
             speech.src = 'speech.mp3';
             speech.volume = 1;
