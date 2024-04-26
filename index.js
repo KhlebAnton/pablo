@@ -17,14 +17,8 @@ let soundNo = [
 btn.addEventListener('click', () => {
     if (answer.value == 27) {
         label.style.opacity = '0';
-        var audio = new Audio();
-        audio.preload = 'auto';
-        audio.src = 'yes sound/oh-yeah.mp3';
-        audio.play();
-
-        setTimeout(() => {
-            present.classList.add('open');
-        }, 3000);
+        present.classList.add('open');
+        
         setTimeout(() => {
             var audio = new Audio();
             audio.preload = 'auto';
@@ -32,8 +26,7 @@ btn.addEventListener('click', () => {
             audio.canPlayType('audio/mp3; codecs="vorbis"');
             audio.play();
             imgPresent.style.zIndex = 3;
-            imgPresent.style.transform = 'scale(2)';
-            
+            imgPresent.style.transform = 'scale(2)';    
         }, 5000);
 
 
