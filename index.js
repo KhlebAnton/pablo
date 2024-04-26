@@ -5,7 +5,7 @@ const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present')
 
 document.getElementById('bg-sound').volume = 0.2;
-present.addEventListener('click', ()=> {document.getElementById('bg-sound').play()})
+present.addEventListener('click', () => { document.getElementById('bg-sound').play() })
 let soundNo = [
     'no sound/no-bezrazl.mp3',
     'no sound/no-rezko.mp3',
@@ -27,8 +27,11 @@ btn.addEventListener('click', () => {
             present.classList.add('open');
         }, 3000);
         setTimeout(() => {
-            audio.src = 'speech.mp3';
-            audio.play();
+            var speech = new speech();
+            speech.preload = 'auto';
+            speech.src = 'speech.mp3';
+            speech.volume = 1;
+            speech.play();
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
             setTimeout(() => {
@@ -36,7 +39,7 @@ btn.addEventListener('click', () => {
                     var randomIndex = Math.floor(Math.random() * soundNo.length);
                     var audio = new Audio();
                     audio.preload = 'auto';
-                    audio.volume = 1;
+                    
                     audio.src = soundNo[randomIndex];
                     audio.play();
                 })
