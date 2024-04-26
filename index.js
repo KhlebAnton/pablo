@@ -27,7 +27,7 @@ btn.addEventListener('click', () => {
             audio.play();
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';    
-        }, 5000);
+        }, 2000);
 
 
     } else {
