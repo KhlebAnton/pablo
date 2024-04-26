@@ -27,7 +27,10 @@ btn.addEventListener('click', () => {
             present.classList.add('open');
         }, 3000);
         setTimeout(() => {
-            speech.play();
+            var audio = new Audio();
+            audio.preload = 'auto';
+            audio.src = 'speech.mp3';
+            audio.play();
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
         }, 5000);
