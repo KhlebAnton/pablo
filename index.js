@@ -3,7 +3,7 @@ const answer = document.getElementById('answer');
 const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present');
-
+document.getElementById('bg-sound').volume = 0.2;
 btn.addEventListener('click', () => { document.getElementById('bg-sound').play() });
 
 let soundNo = [
