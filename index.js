@@ -29,6 +29,7 @@ btn.addEventListener('click', () => {
             var audio = new Audio();
             audio.preload = 'auto';
             audio.src = 'speech.mp3';
+            audio.canPlayType('audio/mp3; codecs="vorbis"');
             audio.play();
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
