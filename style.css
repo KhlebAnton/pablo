@@ -12,9 +12,38 @@ html {
 }
 
 body {
+
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+body::after {
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    content: '';
+    position: absolute;
+    background: url('img/scale_1200.jpg') 50% / cover;
+    z-index: -1;
+    filter: blur(8px);
+    animation: zoom 2s infinite ease-in-out alternate-reverse;
+    
+}
+@keyframes zoom {
+    from {
+        top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    }
+    to {
+        top: -40px;
+        bottom: -40px;
+        left: -40px;
+        right: -40px;
+    }
 }
 
 .present {
@@ -30,6 +59,7 @@ body {
     background-color: #c50b0b;
     border: 1px solid #0000006d;
     transition: 2s;
+    
 }
 .img-present {
     position: absolute;
@@ -119,4 +149,23 @@ label {
     top: 30px;
     text-align: center;
     transition: 1s;
+    font-size: 21px;
+
+    text-transform: uppercase;
+}
+label span {
+    font-weight: 800;
+}
+input {
+    margin: 2em 0;
+    font-size: 21px;
+    max-width: 100px;
+    padding: 20px;
+    background-color: #ffffff3c;
+    border-radius: 10px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #ffffff3c;
+    border-radius: 10px;
 }
