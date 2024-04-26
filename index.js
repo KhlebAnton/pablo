@@ -4,9 +4,15 @@ const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present');
 
+
+
 var audioSpech = new Audio();
 audioSpech.preload = 'auto';
 audioSpech.src = 'speech.mp3';
+
+audioSpech.addEventListener('canplaythrough', ()=> {
+    alert('aaa')
+})
 
 let soundNo = [
     'no sound/no-bezrazl.mp3',
