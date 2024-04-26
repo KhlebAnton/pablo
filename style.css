@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.present {
+    position: relative;
+}
+
+.box {
+    margin: 0 auto;
+    top: 5px;
+    left: 0;
+    width: 150px;
+    height: 130px;
+    background-color: #c50b0b;
+    border: 1px solid #0000006d;
+    transition: 2s;
+}
+.img-present {
+    position: absolute;
+    width: 120px;
+    transition: 2s;
+    border: 2px solid black;
+    border-radius: 80px;
+}
+
+
+.top {
+    position: relative;
+    width: 160px;
+    height: 30px;
+    background-color: #c50b0b;
+    border: 1px solid #0000006d;
+    transition: 2s;
+}
+.present {
+    animation: gift 2s ease-in infinite alternate-reverse;
+}
+@keyframes gift {
+    from {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+    
+}
+.line {
+    margin: 0 auto;
+    width: 30px;
+    height: 100%;
+    background-color: #0ccd1c;
+    border-left: 1px solid #0000006d;
+    border-right: 1px solid #0000006d;
+}
+
+.line-top {
+    background: url('img/1669921532_4-indasil-club-p-bant-risunok-dlya-detei-oboi-5.png') 50% / cover;
+    width: 70px;
+    height: 62px;
+    position: absolute;
+    z-index: 2;
+    top: -30px;
+    left: calc(50% - 35px);
+
+}
+
+.right-box,
+.left-box {
+    width: 5px;
+    position: absolute;
+    top: 29.5px;
+    z-index: -1;
+    left: 0;
+    
+}
+.right-box {
+    left: auto;
+    right: 0;
+}
+
+.open .box {
+    transform:rotateX(-80deg) translatez(57px) translateY(-100px);
+}
+.open .right-box {
+    transform: rotateZ(80deg) translateY(-50px) translateX(50px);
+}
+.open .left-box {
+    transform: rotateZ(-80deg) translateY(-50px) translateX(-50px);
+}
+.open .top {
+    transform:rotateZ(-30deg)  translateY(-100px);
+}
+.present.open {
+    animation: none;
+}
+.present {
+    perspective: 1190px;
+    transform-style: preserve-3d;
+    perspective-origin: 53% 52%;
+}
+label {
+    position: fixed;
+    top: 30px;
+    text-align: center;
+    transition: 1s;
+}
