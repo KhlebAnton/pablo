@@ -25,11 +25,12 @@ btn.addEventListener('click', () => {
 
         setTimeout(() => {
             present.classList.add('open');
-        }, 3000);
-        setTimeout(() => {
             var audio = new Audio();
             audio.preload = 'auto';
             audio.src = 'speech.mp3';
+        }, 3000);
+        setTimeout(() => {
+            
             audio.play();
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
