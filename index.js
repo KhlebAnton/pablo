@@ -27,11 +27,11 @@ btn.addEventListener('click', () => {
             present.classList.add('open');
         }, 3000);
         setTimeout(() => {
-            var speech = new Audio();
-            speech.preload = 'auto';
-            speech.src = 'speech.mp3';
-            speech.volume = 1;
-            speech.play();
+            var audio = new Audio();
+            audio.preload = 'auto';
+            audio.src = 'speech.mp3';
+            audio.play();
+            audio.volume = 1;
             imgPresent.style.zIndex = 3;
             imgPresent.style.transform = 'scale(2)';
             setTimeout(() => {
@@ -39,7 +39,6 @@ btn.addEventListener('click', () => {
                     var randomIndex = Math.floor(Math.random() * soundNo.length);
                     var audio = new Audio();
                     audio.preload = 'auto';
-                    
                     audio.src = soundNo[randomIndex];
                     audio.play();
                 })
