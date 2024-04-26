@@ -6,9 +6,6 @@ const imgPresent = document.getElementById('img-present');
 
 const speech = document.getElementById('speech');
 
-document.getElementById('bg-sound').volume = 0.2;
-btn.addEventListener('click', () => { document.getElementById('bg-sound').play() });
-
 let soundNo = [
     'no sound/no-bezrazl.mp3',
     'no sound/no-rezko.mp3',
