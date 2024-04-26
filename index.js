@@ -4,7 +4,7 @@ const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present')
 
-document.getElementById('bg-sound').volume = 0.4;
+document.getElementById('bg-sound').volume = 0.2;
 present.addEventListener('click', ()=> {document.getElementById('bg-sound').play()})
 let soundNo = [
     'no sound/no-bezrazl.mp3',
@@ -49,6 +49,7 @@ btn.addEventListener('click', () => {
         var randomIndex = Math.floor(Math.random() * soundNo.length);
         var audio = new Audio();
         audio.preload = 'auto';
+        audio.volume = 0.3;
         audio.src = soundNo[randomIndex];
         audio.play();
     }
