@@ -7,7 +7,7 @@ const imgPresent = document.getElementById('img-present');
 var audioSoun = new Audio();
 audioSoun.preload = 'auto';
 audioSoun.src = 'sound.mp3';
-audioSoun.volume = 0.3;
+audioSoun.volume = 0.1;
 btn.addEventListener('click', () => {
 
     audioSoun.play();
