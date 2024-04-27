@@ -4,11 +4,12 @@ const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present');
 
-btn.addEventListener('click', ()=> {
-    var audioSoun = new Audio();
-    audioSoun.preload = 'auto';
-    audioSoun.src = 'sound.mp3';
-    audioSoun.volume = 0.3;
+var audioSoun = new Audio();
+audioSoun.preload = 'auto';
+audioSoun.src = 'sound.mp3';
+audioSoun.volume = 0.3;
+btn.addEventListener('click', () => {
+
     audioSoun.play();
 });
 
