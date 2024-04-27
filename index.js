@@ -3,6 +3,7 @@ const answer = document.getElementById('answer');
 const present = document.getElementById('present');
 const label = document.getElementById('label');
 const imgPresent = document.getElementById('img-present');
+const text = document.getElementById('text');
 
 var audioSoun = new Audio();
 audioSoun.preload = 'auto';
@@ -43,6 +44,7 @@ btn.addEventListener('click', () => {
         present.classList.add('open');
 
         setTimeout(() => {
+            text.style.opacity = 1;
             var audio = new Audio();
             audio.preload = 'auto';
             audio.src = 'speech.mp3';

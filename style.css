@@ -169,3 +169,14 @@ button {
     background-color: #ffffff3c;
     border-radius: 10px;
 }
+.text-present {
+    position: absolute;
+    width:400px;
+    text-align: center;
+    font-weight: bolder;
+    bottom: 0   ;
+    background-color: #00000046;
+    color: #ffffff;
+    font-size: 25px;
+    transition: 2s;
+}
